@@ -94,3 +94,35 @@ function type() {
 
 // Start the effect
 document.addEventListener('DOMContentLoaded', type);
+
+function copyEmail() {
+    const email = "shrutighodke2003@gmail.com";
+    navigator.clipboard.writeText(email);
+    alert("Email copied to clipboard!");
+}
+
+
+function sendMessage() {
+    alert("Message Sent Successfully!");
+}
+
+// Add this just before your closing </body> tag
+window.addEventListener('scroll', () => {
+    const items = document.querySelectorAll('.timeline-item');
+    
+    items.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        if (itemTop < window.innerHeight * 0.8) {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+        }
+    });
+});
+
+// Initial styles for the animation
+document.querySelectorAll('.timeline-item').forEach(item => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(20px)';
+    item.style.transition = 'all 0.6s ease-out';
+});
+

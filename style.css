@@ -15,7 +15,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px;
+  padding: 60px;
   text-align: 20px;;
 }
 
@@ -23,14 +23,20 @@ body {
   width: 280px;
 }
 
+
+
+
+
+
 .btn {
-  display: inline-block;
+  
   margin-top: 20px;
   padding: 10px 20px;
   background: #6366f1;
   color: white;
   border-radius: 6px;
   text-decoration: none;
+  gap: 4px;
 }
 
 section {
@@ -90,7 +96,7 @@ section {
 .contact-section h2 {
   font-size: 2.5rem;
   color: #6366f1;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .contact-section p {
@@ -250,7 +256,7 @@ p {
 }
 
 .hero-animation img {
-  width: 530px;
+  width: 600px;
   height: auto;
 }
 .hero {
@@ -381,50 +387,8 @@ body {
     font-size: 0.9rem;
 }
 
-.education-container {
-    width: 100%;
-    max-width: 900px;
-}
 
-.section-title {
-    font-size: 42px;
-    font-weight: 300;
-    margin-bottom: 40px;
-}
 
-.edu-item {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #30363d; /* The separator line */
-}
-
-.no-border {
-    border-bottom: none;
-}
-
-.edu-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 12px;
-}
-
-.logo {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-}
-
-.uni-name {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.degree {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
 
 .date {
     color: #90969d;
@@ -789,3 +753,244 @@ section {
     from, to { opacity: 1; }
     50% { opacity: 0; }
 }
+
+
+
+.social-links2 {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+
+.projects {
+  padding: 80px 10%;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.projects h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: #020617;
+  padding: 25px;
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.project-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 15px;
+  color: #94a3b8;
+  margin-bottom: 15px;
+}
+
+.project-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.project-meta span {
+  background: #1e293b;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+
+/* Main Container - FULL WIDTH */
+.contact-container {
+    width: 100%;
+    min-height: 100vh;
+    background: #111827;
+    padding: 60px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    box-sizing: border-box;
+}
+
+/* Form Section */
+.contact-form {
+    flex: 1;
+}
+
+.contact-form h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #1f2937;
+    color: white;
+    font-size: 15px;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Button */
+.send-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00f5ff, #ff00c8);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    opacity: 0.85;
+}
+
+/* Photo Section */
+.contact-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-photo img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid transparent;
+    background: linear-gradient(#111827, #111827) padding-box,
+                linear-gradient(45deg, #00f5ff, #ff00c8) border-box;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-photo img {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+
+/* Container */
+.education-section {
+    background-color: #0d1117; /* Dark background */
+    color: #ffffff;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column; /* Forces vertical stack */
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Styles - Fixed to stay above */
+.education-header {
+    text-align: center;
+    margin-bottom: 60px; /* Space between header and timeline */
+    width: 100%;
+}
+
+.title {
+    font-size: 3rem;
+    color: #58a6ff;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.line-divider {
+    width: 60px;
+    height: 4px;
+    background-color: #58a6ff;
+    margin: 0 auto 15px;
+}
+
+.subtitle {
+    color: #8b949e;
+    font-size: 1.1rem;
+}
+
+/* Timeline Logic */
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    border-left: 2px solid #30363d; /* Vertical line */
+    padding-left: 40px;
+    margin-left: 20px; /* Adjust based on icon size */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.marker {
+    position: absolute;
+    left: -58px; /* Centers the cap icon on the line */
+    background: #161b22;
+    border: 2px solid #30363d;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8b949e;
+}
+
+.year { color: #8b949e; font-size: 0.9rem; }
+.degree { color: #ffffff; margin: 5px 0; }
+.grade { color: #58a6ff; font-weight: bold; margin-bottom: 10px; }
+.desc { color: #c9d1d9; line-height: 1.6; }
