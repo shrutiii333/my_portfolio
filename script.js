@@ -1,128 +1,83 @@
-// Simple JS for future enhancements
-console.log("Portfolio Loaded Successfully");
-// Simple fade-in animation for education items
-document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('.edu-item');
-    
-    items.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = 'all 0.6s ease-out';
-        
-        setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-        }, index * 200); // Staggered delay
-    });
-});
+// ===== TYPEWRITER EFFECT (mobile friendly) =====
+(function() {
+  const words = ['Shruti Ghodke', 'a Data Analyst', 'a Developer'];
+  let i = 0;
+  let j = 0;
+  let isDeleting = false;
+  const typewriterSpan = document.getElementById('typewriter');
+  
+  if (!typewriterSpan) return;
 
-
-// Function to add a fade-in effect to the tech icons
-document.addEventListener('DOMContentLoaded', () => {
-    const icons = document.querySelectorAll('.icon-item');
-
-    icons.forEach((icon, index) => {
-        // Start them as invisible
-        icon.style.opacity = '0';
-        icon.style.transform = 'translateY(20px)';
-        icon.style.transition = 'all 0.5s ease-out';
-
-        // Trigger animation with a delay for each icon
-        setTimeout(() => {
-            icon.style.opacity = '1';
-            icon.style.transform = 'translateY(0)';
-        }, index * 100); 
-    });
-});
-
-// Example: Log a message when an icon is clicked
-const techStack = document.getElementById('techStack');
-techStack.addEventListener('click', (e) => {
-    const item = e.target.closest('.icon-item');
-    if (item) {
-        console.log(`You clicked on: ${item.innerText}`);
-    }
-});
-
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.blog-card');
-
-    cards.forEach(card => {
-        card.addEventListener('click', () => {
-            const title = card.querySelector('h3').innerText;
-            alert(`Opening blog: ${title}`);
-            // In a real app, you'd use: window.location.href = "/blog-url";
-        });
-    });
-});
-
-const textElement = document.getElementById('typewriter');
-const phrases = ["Shruti", "a Data Analyst",];
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typeSpeed = 150;
-
-function type() {
-    const currentPhrase = phrases[phraseIndex];
-    
-    if (isDeleting) {
-        // Remove characters
-        textElement.textContent = currentPhrase.substring(0, charIndex - 1);
-        charIndex--;
-        typeSpeed = 100;
-    } else {
-        // Add characters
-        textElement.textContent = currentPhrase.substring(0, charIndex + 1);
-        charIndex++;
-        typeSpeed = 200;
-    }
-
-    // Logic for switching between typing and deleting
-    if (!isDeleting && charIndex === currentPhrase.length) {
-        isDeleting = true;
-        typeSpeed = 2000; // Pause at the end of phrase
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        typeSpeed = 500;
-    }
-
-    setTimeout(type, typeSpeed);
-}
-
-// Start the effect
-document.addEventListener('DOMContentLoaded', type);
-
-function copyEmail() {
-    const email = "shrutighodke2003@gmail.com";
-    navigator.clipboard.writeText(email);
-    alert("Email copied to clipboard!");
-}
-
-
-function sendMessage() {
-    alert("Message Sent Successfully!");
-}
-
-// Add this just before your closing </body> tag
-window.addEventListener('scroll', () => {
-    const items = document.querySelectorAll('.timeline-item');
-    
-    items.forEach(item => {
-        const itemTop = item.getBoundingClientRect().top;
-        if (itemTop < window.innerHeight * 0.8) {
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
+  function typeEffect() {
+    if (i < words.length) {
+      if (!isDeleting && j <= words[i].length) {
+        typewriterSpan.textContent = words[i].substring(0, j);
+        j++;
+        setTimeout(typeEffect, 120);
+      } 
+      else if (isDeleting && j >= 0) {
+        typewriterSpan.textContent = words[i].substring(0, j);
+        j--;
+        setTimeout(typeEffect, 60);
+      } 
+      else {
+        if (!isDeleting) {
+          isDeleting = true;
+          setTimeout(typeEffect, 1000);
+        } 
+        else {
+          isDeleting = false;
+          i = (i + 1) % words.length;
+          j = 0;
+          setTimeout(typeEffect, 200);
         }
+      }
+    }
+  }
+  typeEffect();
+})();
+
+// ===== CLOSE MOBILE MENU ON LINK CLICK =====
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    const toggle = document.getElementById('nav-toggle');
+    if (toggle && toggle.checked) {
+      toggle.checked = false;
+    }
+  });
+});
+
+// ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === "#" || href === "") return;
+    
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// ===== CONTACT FORM BUTTON (demo) =====
+document.getElementById('sendMessageBtn')?.addEventListener('click', function() {
+  alert('📧 Demo: This is a static portfolio. Please email shrutighodke2003@gmail.com');
+});
+
+// ===== IMAGE FALLBACK (if SVGs missing) =====
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('img[onerror]');
+  images.forEach(img => {
+    img.addEventListener('error', function() {
+      // onerror already defined in HTML, but just in case
+      if (!this.src.includes('placeholder')) {
+        this.src = 'https://via.placeholder.com/500x400?text=Image+not+found';
+      }
     });
+  });
 });
-
-// Initial styles for the animation
-document.querySelectorAll('.timeline-item').forEach(item => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(20px)';
-    item.style.transition = 'all 0.6s ease-out';
-});
-

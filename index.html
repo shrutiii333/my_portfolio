@@ -1,322 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <title>Shruti | Data Analyst</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
+  <!-- Important for mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>Shruti Ghodke | Data Analyst & Developer</title>
-  <meta name="description" content="Portfolio of Shruti Ghodke - Data Analyst and Web Developer.">
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://your-link.github.io/">
-  <meta property="og:title" content="Shruti Ghodke | Portfolio">
-  <meta property="og:image" content="link-to-your-thumbnail-image.png">
-
-
-
-
-
-</head>
-
+  <!-- CSS link -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google fonts & icon libs -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</class>
 <body>
-
-
   <header class="navbar">
     <div class="signature">Shruti Ghodke</div>
+    <!-- Mobile hamburger (checkbox method) -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
     <ul class="nav-links">
       <li><a href="#skills">Skills</a></li>
       <li><a href="#opensource">Open Source</a></li>
       <li><a href="#blogs">Blogs</a></li>
       <li><a href="Shruti resume.pdf" target="_blank">Resume</a></li>
-
       <li><a href="#contact" class="btn">Contact Me</a></li>
     </ul>
   </header>
 
-
-
-
-
+  <!-- Hero with typewriter -->
   <section class="hero">
-    <div>
-      <h1 class="hero-title">
-        Hi all, I'm <span id="typewriter"></span><span class="cursor">|</span>
-      </h1>
-
-      <br></br>
-      <p>
-
-        I am a motivated and versatile individual, always eager to take on new challenges.
-        With a passion for learning I am dedicated to delivering high-quality results.
-        With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and
-        achieve great things.
-
-
-
-      </p>
-      <br>
-      <br>
-      <br>
-
-
-
-
-
-
-
+    <div class="hero-text">
+      <h1 class="hero-title">Hi all, I'm <span id="typewriter"></span><span class="cursor">|</span></h1>
+      <p>I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.</p>
+      
       <div class="social-links">
-        <a href="https://github.com/shrutiii333" target="_blank" class="icon github">
-          <i class="fab fa-github"></i>
-        </a>
-
-        <a href="https://linkedin.com/in/shruti-ghodke-b973433a4" target="_blank" class="icon linkedin">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-
-        <!-- GUARANTEED EMAIL LINK -->
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shrutighodke2003@gmail.com" target="_blank"
-          class="icon gmail">
-          <i class="fas fa-envelope"></i>
-        </a>
+        <a href="https://github.com/shrutiii333" target="_blank" class="icon github"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/shruti-ghodke-b973433a4" target="_blank" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shrutighodke2003@gmail.com" target="_blank" class="icon gmail"><i class="fas fa-envelope"></i></a>
       </div>
-
-      <p class="email-text">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shrutighodke2003@gmail.com" target="_blank">
-
-        </a>
-      </p>
-
-      <br>
-      <br>
-      <br>
-
-      <a class="btn" href="#">Contact Me</a>
-
-      <a class="btn" href="#">Check Resume</a>
+      
+      <div class="hero-buttons">
+        <a class="btn" href="#contact">Contact Me</a>
+        <a class="btn" href="Shruti resume.pdf" target="_blank">Check Resume</a>
+      </div>
     </div>
-
-
-
-    </div>
-
-
-
-
-
-
-
-
     <div class="hero-animation">
-      <img src="investment-data-animate (1).svg" alt="Data Illustration">
+      <img src="investment-data-animate (1).svg" alt="Data Illustration" onerror="this.src='https://via.placeholder.com/500x400?text=Data+analytics'">
     </div>
-
-    <br>
-    <br>
-    <br>
-
-
-
   </section>
 
-
-
-
-
-
-
+  <!-- Skills (Proficiency) -->
   <section id="skills" class="section">
     <h2>Proficiency</h2>
     <div class="skill-container">
-      <div class="skill-bar">
-
-        <span>Data Visualization (Tableau/PowerBI)</span>
-        <div class="bar">
-          <div class="progress" style="width: 90%;"></div>
-        </div>
-      </div>
-      <div class="skill-bar">
-        <span>Statistical Analysis (Python/R)</span>
-        <div class="bar">
-          <div class="progress" style="width: 85%;"></div>
-        </div>
-      </div>
-      <div class="skill-bar">
-        <span>Database Management (SQL)</span>
-        <div class="bar">
-          <div class="progress" style="width: 80%;"></div>
-        </div>
-      </div>
+      <div class="skill-bar"><span>Data Visualization (Tableau/PowerBI)</span><div class="bar"><div class="progress" style="width:90%"></div></div></div>
+      <div class="skill-bar"><span>Statistical Analysis (Python/R)</span><div class="bar"><div class="progress" style="width:85%"></div></div></div>
+      <div class="skill-bar"><span>Database Management (SQL)</span><div class="bar"><div class="progress" style="width:80%"></div></div></div>
     </div>
   </section>
 
-
-
+  <!-- What I do / hero1 (reversed on mobile) -->
   <section class="hero1">
     <div class="hero-animation">
-      <img src="data-animate.svg" alt="Data Illustration">
+      <img src="data-animate.svg" alt="data animation" onerror="this.src='https://via.placeholder.com/500x400?text=data+insights'">
     </div>
-
-
-
-    <div>
-      <div class="text-content">
-        <h1>What I do</h1>
-        <p class="tagline">DATA ENTHUSIAST TURNED INSIGHT HUNTER EXPLORING EVERY HIDDEN PATTERN</p>
-
-        <div class="icon-grid" id="techStack">
-
-          <div class="icon-item"><i class="fab fa-python"></i><span>python</span></div>
-          <div class="icon-item icon-sql"><i class="fas fa-database"></i><span>sql-database</span></div>
-          <div class="icon-item icon-powerbi"><i class="fas fa-chart-bar"></i><span>power-bi</span></div>
-          <div class="icon-item icon-tableau"><i class="fas fa-braille"></i><span>tableau</span></div>
-
-          <div class="icon-item icon-excel"><i class="fas fa-file-excel"></i><span>excel</span></div>
-
-          <ul class="feature-list">
-            <li>Design and maintain automated ETL pipelines and data cleaning workflows for large datasets</li>
-            <li>Create interactive business intelligence dashboards and data visualizations for stakeholders</li>
-            <li>Perform exploratory data analysis (EDA) and statistical modeling to drive business decisions</li>
-          </ul>
-        </div>
+    <div class="text-content">
+      <h1>What I do</h1>
+      <p class="tagline">DATA ENTHUSIAST TURNED INSIGHT HUNTER EXPLORING EVERY HIDDEN PATTERN</p>
+      <div class="icon-grid">
+        <div class="icon-item"><i class="fab fa-python"></i><span>python</span></div>
+        <div class="icon-item"><i class="fas fa-database"></i><span>sql</span></div>
+        <div class="icon-item"><i class="fas fa-chart-bar"></i><span>power-bi</span></div>
+        <div class="icon-item"><i class="fas fa-braille"></i><span>tableau</span></div>
+        <div class="icon-item"><i class="fas fa-file-excel"></i><span>excel</span></div>
       </div>
+      <ul class="feature-list">
+        <li>Design and maintain automated ETL pipelines and data cleaning workflows for large datasets</li>
+        <li>Create interactive business intelligence dashboards and data visualizations for stakeholders</li>
+        <li>Perform exploratory data analysis (EDA) and statistical modeling to drive business decisions</li>
+      </ul>
+    </div>
   </section>
 
-
-
-
-
+  <!-- Projects -->
   <section class="projects">
     <h2>Projects</h2>
-
     <div class="projects-grid">
-
       <div class="project-card">
         <h3>Movie Data Analysis</h3>
         <p>Movie data analysis using Python and Pandas.</p>
-
-        <div class="project-meta">
-          <span>🐍 Python</span>
-          <span>📊 Pandas</span>
-          <span>📈 Matplotlib</span>
-        </div>
-
-        <a href="https://github.com/shrutiii333/Movie-data-analysis" target="_blank">
-          View Project →
-        </a>
+        <div class="project-meta"><span>🐍 Python</span><span>📊 Pandas</span><span>📈 Matplotlib</span></div>
+        <a href="https://github.com/shrutiii333/Movie-data-analysis" target="_blank">View Project →</a>
       </div>
-
       <div class="project-card">
         <h3>React Blog</h3>
         <p>Your personal blog built using React.</p>
-
-        <div class="project-meta">
-          <span>⚛️ React</span>
-          <span>🎨 CSS</span>
-          <span>🧠 JavaScript</span>
-        </div>
-
-        <a href="#" target="_blank">
-          View Project →
-        </a>
+        <div class="project-meta"><span>⚛️ React</span><span>🎨 CSS</span><span>🧠 JavaScript</span></div>
+        <a href="#" target="_blank">View Project →</a>
       </div>
-
     </div>
   </section>
 
-
-
-<section class="education-section">
+  <!-- Education -->
+  <section class="education-section">
     <div class="education-header">
-        <h1 class="title">Education</h1>
-        <div class="line-divider"></div>
-        <p class="subtitle">My educational journey and qualifications.</p>
+      <h1 class="title">Education</h1>
+      <div class="line-divider"></div>
+      <p class="subtitle">My educational journey and qualifications.</p>
     </div>
-
     <div class="timeline-container">
-        
-        <div class="timeline-item">
-            <div class="marker">
-                <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="content">
-                <span class="year">2022 - Jul 2024</span>
-                <h2>Uttaranchal University, Dehradun</h2>
-                <h3 class="degree">Master of Computer Applications - MCA</h3>
-                <p class="grade">Grade: 8.33 CGPA</p>
-                <p class="desc">I recently graduated with a Master of Computer Applications (MCA) from Uttaranchal University...</p>
-            </div>
+      <div class="timeline-item">
+        <div class="marker"><i class="fas fa-graduation-cap"></i></div>
+        <div class="content">
+          <span class="year">2022 - Jul 2024</span>
+          <h2>Uttaranchal University, Dehradun</h2>
+          <h3 class="degree">Master of Computer Applications - MCA</h3>
+          <p class="grade">Grade: 8.33 CGPA</p>
+          <p class="desc">I recently graduated with a Master of Computer Applications (MCA) from Uttaranchal University...</p>
         </div>
-
-        <div class="timeline-item">
-            <div class="marker">
-                <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="content">
-                <span class="year">May 2019 - 2022</span>
-                <h2>Sri Dev Suman Uttarakhand University, Uttarkashi</h2>
-                <h3 class="degree">Bachelor of Science - BSc</h3>
-            </div>
+      </div>
+      <div class="timeline-item">
+        <div class="marker"><i class="fas fa-graduation-cap"></i></div>
+        <div class="content">
+          <span class="year">May 2019 - 2022</span>
+          <h2>Sri Dev Suman Uttarakhand University, Uttarkashi</h2>
+          <h3 class="degree">Bachelor of Science - BSc</h3>
         </div>
-
+      </div>
     </div>
-</section>
+  </section>
 
-
-
-
-
-
-    <div class="contact-container">
-
-        <!-- Left Side - Form -->
-        <div class="contact-form">
-            <h2>Drop Me a Message</h2>
-
-            <input type="email" placeholder="Your Email" class="input-box">
-            <input type="text" placeholder="Your Name" class="input-box">
-            <input type="text" placeholder="Subject" class="input-box">
-            <textarea placeholder="Message" class="input-box"></textarea>
-
-            <button class="send-btn" onclick="sendMessage()">
-                Send Message
-            </button>
-        </div>
-
-        <!-- Right Side - Photo -->
-        <div class="contact-photo">
-            <img src="shruti.jpeg" alt="My Photo">
-        </div>
-
+  <!-- Contact -->
+  <div class="contact-container" id="contact">
+    <div class="contact-form">
+      <h2>Drop Me a Message</h2>
+      <input type="email" placeholder="Your Email" class="input-box">
+      <input type="text" placeholder="Your Name" class="input-box">
+      <input type="text" placeholder="Subject" class="input-box">
+      <textarea placeholder="Message" class="input-box"></textarea>
+      <button class="send-btn" id="sendMessageBtn">Send Message</button>
     </div>
+    <div class="contact-photo">
+      <img src="shruti.jpeg" alt="Shruti photo" onerror="this.src='https://via.placeholder.com/280x280?text=Shruti'">
+    </div>
+  </div>
 
+  <footer class="footer">
+    <p>© 2025 Shruti Ghodke · Data Analyst</p>
+  </footer>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  
-
-      
-
-  
-
+  <!-- JavaScript link -->
   <script src="script.js"></script>
 </body>
-
 </html>
