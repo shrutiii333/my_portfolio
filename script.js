@@ -37,12 +37,24 @@
   typeEffect();
 })();
 
+// ===== MOBILE MENU TOGGLE =====
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
+  }
+});
+
 // ===== CLOSE MOBILE MENU ON LINK CLICK =====
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    const toggle = document.getElementById('nav-toggle');
-    if (toggle && toggle.checked) {
-      toggle.checked = false;
+    const navLinks = document.getElementById('navLinks');
+    if (navLinks && navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
     }
   });
 });
@@ -65,8 +77,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===== CONTACT FORM BUTTON (demo) =====
-document.getElementById('sendMessageBtn')?.addEventListener('click', function() {
-  alert('📧 Demo: This is a static portfolio. Please email shrutighodke2003@gmail.com');
+document.addEventListener('DOMContentLoaded', function() {
+  const sendBtn = document.getElementById('sendMessageBtn');
+  if (sendBtn) {
+    sendBtn.addEventListener('click', function() {
+      alert('📧 Demo: This is a static portfolio. Please email shrutighodke2003@gmail.com');
+    });
+  }
+});
+
+// ===== VIEW PROJECT BUTTON (demo) =====
+document.addEventListener('DOMContentLoaded', function() {
+  const viewBtn = document.querySelector('.view-btn');
+  if (viewBtn) {
+    viewBtn.addEventListener('click', function() {
+      alert('Project details coming soon!');
+    });
+  }
 });
 
 // ===== IMAGE FALLBACK (if SVGs missing) =====
@@ -81,8 +108,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
-  document.querySelector(".view-btn").addEventListener("click", function() {
-    alert("Project details coming soon!");
-  });
-
