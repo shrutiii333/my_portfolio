@@ -340,13 +340,7 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
   color: #cbd5e1;
 }
 
-
-.education-section {
-    padding: 80px 10%;
-    background-color: var(--bg-dark);
-}
-
-.section-header {
+section-header {
     text-align: center;
     margin-bottom: 60px;
 }
@@ -420,7 +414,8 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
 
 .education-section {
     padding: 60px 8%;
-  }
+    background-color: #09090b; /* Matches your bg-dark */
+}
 
 .education-column {
     display: block; /* Removes grid/flex layout to force vertical stack */
@@ -502,6 +497,11 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
     line-height: 1.6;
     font-size: 0.95rem;
 }
+
+
+
+
+
 
 /* Header styling based on your second screenshot */
 .section-header { text-align: center; margin-bottom: 50px; }
