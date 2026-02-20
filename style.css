@@ -381,7 +381,7 @@ section-header {
     top: 0;
     width: 2px;
     height: 100%;
-    
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .timeline-item {
@@ -410,14 +410,12 @@ section-header {
 .timeline-content {
     background: transparent;
     transition: 0.3s;
-
-  }
-
-  .education-section {
-  background: transparent;   /* removes black */
 }
 
-
+.education-section {
+    padding: 60px 8%;
+     
+}
 
 .education-column {
     display: block; /* Removes grid/flex layout to force vertical stack */
@@ -489,7 +487,7 @@ section-header {
 }
 
 .grade span {
-    color: whitesmoke;
+    color: #a1a1aa;
 }
 
 .description {
