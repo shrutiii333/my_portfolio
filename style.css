@@ -816,10 +816,10 @@ img, svg {
 
 
 :root {
-    --bg-dark: #09090b;
+    --bg-dark: #0f172a;
     --card-bg: #121214;
     --accent-purple: #8b5cf6;
     --text-white: #ffffff;
     --text-dim: #a1a1aa;
-    --border-color: rgba(255, 255, 255, 0.08);
+    --border-color: darkblue
 }
