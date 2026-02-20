@@ -437,7 +437,7 @@ section-header {
 .education-card {
     position: relative;
     margin-bottom: 40px; /* Space between the two sections */
-    background: transparent;
+  
 }
 
 .edu-icon {
@@ -446,7 +446,7 @@ section-header {
     top: 0;
     width: 40px;
     height: 40px;
-    background: #121214; /* Matches your card-bg */
+    
     border: 1px solid #8b5cf6; /* Matches your accent */
     border-radius: 50%;
     display: flex;
