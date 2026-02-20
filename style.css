@@ -414,7 +414,7 @@ section-header {
 
 .education-section {
     padding: 60px 8%;
-    background-color: #09090b; /* Matches your bg-dark */
+     /* Matches your bg-dark */
 }
 
 .education-column {
@@ -499,15 +499,6 @@ section-header {
 }
 
 
-
-
-
-
-/* Header styling based on your second screenshot */
-.section-header { text-align: center; margin-bottom: 50px; }
-.section-title { font-size: 3rem; color: #8b5cf6; margin-bottom: 10px; }
-.section-subtitle { color: #a1a1aa; }
-.title-underline { width: 60px; height: 3px; background: #8b5cf6; margin: 0 auto 15px; }
 
 
 /* ===== CONTACT SECTION ===== */
