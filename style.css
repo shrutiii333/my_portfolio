@@ -410,12 +410,14 @@ section-header {
 .timeline-content {
     background: transparent;
     transition: 0.3s;
+
+  }
+
+  .education-section {
+  background: transparent;   /* removes black */
 }
 
-.education-section {
-    padding: 60px 8%;
-     
-}
+
 
 .education-column {
     display: block; /* Removes grid/flex layout to force vertical stack */
