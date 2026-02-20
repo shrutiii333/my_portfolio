@@ -696,12 +696,12 @@ img, svg {
     padding: 20px 20px;
 }
 
-.section-header {
+.section-header1 {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.section-title {
+.section-title1{
     font-size: 3rem;
     font-weight: 700;
     color: var(--accent-purple);
