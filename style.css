@@ -689,6 +689,11 @@ img, svg {
   height: auto;
 }
 
+
+
+
+
+
 /*project  section*/
 .projects-container {
     max-width: 1200px;
@@ -696,10 +701,37 @@ img, svg {
     padding: 20px 20px;
 }
 
-.section-header1 {
-    text-align: center;
-    margin-bottom: 60px;
+/* =========================
+   GLOWING PROJECT CARD
+========================= */
+
+.project-card {
+    position: relative;
+    background: var(--card);
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 1;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
 }
+
+/* Glowing border layer */
+.project-card {
+    position: relative;
+    background: var(--card);
+    border-radius: 20px;
+    
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+
+    /* Solid Border */
+    border: 10px solid #a855f7;
+    border: 2px solid #a855f7;
+box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
 
 .section-title1{
     font-size: 3rem;
@@ -727,10 +759,10 @@ img, svg {
 /* Increased Height Project Card */
 .project-card {
     background: var(--card);
-    border: 1px solid var(--border);
+    border: 2px solid var(--border);
     border-radius: 20px;
     overflow: hidden;
-    transition: 0.3s;
+   
     
     /* Height Increase Logic */
     display: flex;
@@ -815,11 +847,18 @@ img, svg {
 
 
 
-:root {
-    --bg-dark: #0f172a;
-    --card-bg: #121214;
-    --accent-purple: #8b5cf6;
-    --text-white: #ffffff;
-    --text-dim: #a1a1aa;
-    --border-color: darkblue
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
