@@ -407,10 +407,14 @@ section-header {
     box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
 }
 
-  
+.timeline-content {
+    background: transparent;
+    transition: 0.3s;
+
+  }
 
   .education-section {
-  background: pink;   /* removes black */
+  background: transparent;   /* removes black */
 }
 
 
@@ -485,7 +489,7 @@ section-header {
 }
 
 .grade span {
-    color: whitesmoke;
+    color: whitesmoke
 }
 
 .description {
