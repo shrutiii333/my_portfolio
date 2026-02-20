@@ -696,6 +696,28 @@ img, svg {
     padding: 20px 20px;
 }
 
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-purple);
+    margin-bottom: 10px;
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: var(--accent-purple);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 sections horizontally */
