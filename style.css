@@ -420,8 +420,7 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
 
 .education-section {
     padding: 60px 8%;
-    /* Matches your bg-dark */
-}
+  }
 
 .education-column {
     display: block; /* Removes grid/flex layout to force vertical stack */
@@ -439,7 +438,7 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
     top: 0;
     width: 2px;
     height: 100%;
-  
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .education-card {
@@ -700,6 +699,7 @@ img, svg {
     margin: 0 auto;
     padding: 20px 20px;
 }
+
 
 /* =========================
    GLOWING PROJECT CARD
