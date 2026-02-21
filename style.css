@@ -371,6 +371,7 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
     color: #854CE6;         /* The purple from your screenshot */
     margin-bottom: 10px;
     letter-spacing: 1px;
+    align-items: center;
 }
 
 .education-section .underline {
