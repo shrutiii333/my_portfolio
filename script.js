@@ -109,13 +109,13 @@ function sendMail(event) {
   const subject = document.getElementById("subject").value;
   const message = document.getElementById("message").value;
 
-  const mailtoLink = `mailto:shrutighodke2003@gmail.com
-  ?subject=${encodeURIComponent(subject)}
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=shrutighodke2003@gmail.com
+  &su=${encodeURIComponent(subject)}
   &body=${encodeURIComponent(
     "Name: " + name + "\n" +
     "Email: " + email + "\n\n" +
     message
   )}`;
 
-  window.location.href = mailtoLink;
+  window.open(gmailLink, "_blank");
 }
