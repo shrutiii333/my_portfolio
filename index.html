@@ -269,9 +269,10 @@
     <input type="text" id="subject" placeholder="Subject" class="input-box" required>
     <textarea id="message" placeholder="Message" class="input-box" required></textarea>
 
+    <form onsubmit="sendMail(event)" class="contact-form">
     <button type="submit" class="send-btn">Send Message</button>
   </form>
-
+  </form>
   <div class="contact-photo">
     <img src="shruti.jpeg" alt="Shruti photo"
       onerror="this.src='https://via.placeholder.com/280x280?text=Shruti'">
