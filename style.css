@@ -342,38 +342,37 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
 
 
 .education-section {
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items horizontally */
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #050505; /* Matches the dark theme */
+  color: white;
 }
-
-
-.section-header {
-      max-width: 800px;
-    margin: 0 auto 60px;
-    text-align: center;
-}
-
 
 .section-title {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #38bdf8; /* Use your theme blue instead of var */
-    margin-bottom: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #854CE6; /* The purple color from your screenshot */
+  margin-bottom: 10px;
 }
 
-.title-underline {
- width: 80px;
-    height: 4px;
-    background: #64ffda;
-    margin: 0 auto 20px; /* centers underline */
-    border-radius: 2px;
+.underline {
+  width: 100px;
+  height: 3px;
+  background-color: #854CE6;
+  margin-bottom: 20px;
+  border-radius: 2px;
 }
 
 .section-subtitle {
-
-     color: #94a3b8;
-    max-width: 600px;
-    margin: 0 auto;
+  font-size: 1.1rem;
+  color: #b1b2b3; /* Soft grey for the subtitle */
+  max-width: 600px;
 }
+
 
 /* Timeline Logic */
 .timeline-container {
