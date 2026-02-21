@@ -468,21 +468,7 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
   
 }
 
-.edu-icon {
-    position: absolute;
-    left: -41px; /* Centers icon on the line */
-    top: 0;
-    width: 40px;
-    height: 40px;
-    
-    border: 1px solid #8b5cf6; /* Matches your accent */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #8b5cf6;
-    z-index: 2;
-}
+
 
 .card-content {
     padding-left: 20px;
@@ -523,6 +509,29 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
     line-height: 1.6;
     font-size: 0.95rem;
 }
+
+/* 1. Add a smooth transition to the icon so the glow doesn't just "snap" on */
+.edu-icon {
+    transition: all 0.4s ease-in-out;
+}
+
+/* 2. When the education card is hovered, the icon glows and the border brightens */
+.education-card:hover .edu-icon {
+    border-color: #b185ff; /* A lighter shade of purple for the border */
+    box-shadow: 0 0 20px rgba(133, 76, 230, 0.8), 
+                0 0 40px rgba(133, 76, 230, 0.4); /* Double glow effect */
+    transform: scale(1.1); /* Slightly enlarges the icon */
+    color: #ffffff; /* Turns the icon inside white for contrast */
+}
+
+/* 3. Optional: Add a subtle glow to the line itself when the section is hovered */
+.education-column:hover::before {
+    box-shadow: 0 0 15px rgba(133, 76, 230, 0.6);
+    background: #854CE6;
+    transition: all 0.4s ease;
+}
+
+
 
 
 
