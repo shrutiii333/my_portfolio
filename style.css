@@ -694,16 +694,7 @@ img, svg {
    GLOWING PROJECT CARD
 ========================= */
 
-.project-card {
-    position: relative;
-    background: var(--card);
-    border-radius: 20px;
-    overflow: hidden;
-    z-index: 1;
-    min-height: 550px;
-    display: flex;
-    flex-direction: column;
-}
+
 
 /* Glowing border layer */
 .project-card {
