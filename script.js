@@ -76,15 +76,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ===== CONTACT FORM BUTTON (demo) =====
-document.addEventListener('DOMContentLoaded', function() {
-  const sendBtn = document.getElementById('sendMessageBtn');
-  if (sendBtn) {
-    sendBtn.addEventListener('click', function() {
-      alert('📧 Demo: This is a static portfolio. Please email shrutighodke2003@gmail.com');
-    });
-  }
-});
+
 
 // ===== VIEW PROJECT BUTTON (demo) =====
 document.addEventListener('DOMContentLoaded', function() {
@@ -108,3 +100,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Initialize EmailJS
+(function () {
+  emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your Public Key
+})();
+
+document.getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    emailjs.sendForm(
+      "YOUR_SERVICE_ID",   // Replace with your Service ID
+      "YOUR_TEMPLATE_ID",  // Replace with your Template ID
+      this
+    )
+    .then(function () {
+      alert("Message Sent Successfully ✅");
+      document.getElementById("contactForm").reset();
+    }, function (error) {
+      alert("Failed to send message ❌");
+      console.log(error);
+    });
+  });

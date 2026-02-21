@@ -257,15 +257,20 @@
 
 
     <!-- Contact Section -->
-    <div class="contact-container" id="contact">
-      <div class="contact-form">
-        <h2>Drop Me a Message</h2>
-        <input type="email" placeholder="Your Email" class="input-box">
-        <input type="text" placeholder="Your Name" class="input-box">
-        <input type="text" placeholder="Subject" class="input-box">
-        <textarea placeholder="Message" class="input-box"></textarea>
-        <button class="send-btn" id="sendMessageBtn">Send Message</button>
-      </div>
+<div class="contact-container" id="contact">
+  <form id="contactForm" class="contact-form">
+    <h2>Drop Me a Message</h2>
+
+    <input type="email" name="from_email" placeholder="Your Email" class="input-box" required>
+    <input type="text" name="from_name" placeholder="Your Name" class="input-box" required>
+    <input type="text" name="subject" placeholder="Subject" class="input-box" required>
+    <textarea name="message" placeholder="Message" class="input-box" required></textarea>
+
+    <button type="submit" class="send-btn">Send Message</button>
+  </form>
+</div>
+
+
       <div class="contact-photo">
         <img src="shruti.jpeg" alt="Shruti photo" onerror="this.src='https://via.placeholder.com/280x280?text=Shruti'">
       </div>
