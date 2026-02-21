@@ -345,42 +345,52 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
    PROJECT SECTION BACKGROUND
 ========================= */
 
+
+
 .project-section1 {
     background-color: #0f172a;
 }
 
 
+
+
+
+/* ===== UPDATED EDUCATION HEADER ===== */
 .education-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers items horizontally */
-  justify-content: center;
-  text-align: center;
-  padding: 50px 20px;
-  background-color: transparent; /* Matches the dark theme */
-  color: white;
+    padding: 80px 8% 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Horizontal centering */
+    text-align: center;     /* Text centering */
+    background: transparent;
 }
 
 .section-title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #854CE6; /* The purple color from your screenshot */
-  margin-bottom: 10px;
+    font-size: clamp(2.5rem, 8vw, 3.5rem); /* Responsive sizing */
+    font-weight: 700;
+    color: #854CE6;         /* The purple from your screenshot */
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-.underline {
-  width: 100px;
-  height: 3px;
-  background-color: #854CE6;
-  margin-bottom: 20px;
-  border-radius: 2px;
+.education-section .underline {
+    width: 120px;           /* Length of the purple line */
+    height: 4px;
+    background-color: #854CE6;
+    margin: 0 auto 20px;    /* 'auto' centers the div itself */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(133, 76, 230, 0.3);
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
-  color: #b1b2b3; /* Soft grey for the subtitle */
-  max-width: 600px;
+    font-size: 1.1rem;
+    color: #b1b2b3;         /* Muted text color */
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
+
+
 
 
 /* Timeline Logic */
@@ -551,7 +561,7 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
   outline: none;
 }
 
-textarea.input-box {
+.textarea.input-box {
   border-radius: 24px;
   resize: vertical;
   min-height: 100px;
@@ -664,14 +674,7 @@ textarea.input-box {
   .home-card h1 {
     font-size: 26px;
   }
-  
-  .education-section {
-    padding: 80px 20px;
-  }
 
-  .edu-title {
-    font-size: 30px;
-  }
 
   .timeline {
     padding-left: 30px;
