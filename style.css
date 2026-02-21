@@ -340,29 +340,37 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
   color: #cbd5e1;
 }
 
-section-header {
+
+
+
+
+.section-header {
+      max-width: 800px;
+    margin: 0 auto 60px;
     text-align: center;
-    margin-bottom: 60px;
 }
+
 
 .section-title {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--accent-purple);
+    color: #38bdf8; /* Use your theme blue instead of var */
     margin-bottom: 10px;
 }
 
 .title-underline {
-    width: 80px;
+ width: 80px;
     height: 4px;
-    background: var(--accent-purple);
-    margin: 0 auto 20px;
+    background: #64ffda;
+    margin: 0 auto 20px; /* centers underline */
     border-radius: 2px;
 }
 
 .section-subtitle {
-    color: var(--text-dim);
-    font-size: 1.1rem;
+
+     color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Timeline Logic */
