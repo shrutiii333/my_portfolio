@@ -1,6 +1,6 @@
 // ===== TYPEWRITER EFFECT (mobile friendly) =====
 (function() {
-  const words = ['Shruti Ghodke', 'a Data Analyst', 'a Developer'];
+  const words = ['Shruti Ghodke', 'a Data Analyst'];
   let i = 0;
   let j = 0;
   let isDeleting = false;
