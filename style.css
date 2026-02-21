@@ -360,7 +360,7 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
     padding: 80px 8% 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Horizontal centering */
+    align-items: left;    /* Horizontal centering */
     text-align: center;     /* Text centering */
     background: transparent;
 }
@@ -467,6 +467,16 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
   line-height: 1.6;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .edu-container::before {
+    left: 10px;
+  }
+
+  .edu-item {
+    padding-left: 50px;
+  }
+}
 
 
 
