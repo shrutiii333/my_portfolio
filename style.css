@@ -348,7 +348,7 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
   justify-content: center;
   text-align: center;
   padding: 50px 20px;
-  background-color: #050505; /* Matches the dark theme */
+  background-color: transparent; /* Matches the dark theme */
   color: white;
 }
 
