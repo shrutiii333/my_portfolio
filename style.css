@@ -440,33 +440,97 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
     transition: 0.3s;
 }
 
+
+/* ===== CONSOLIDATED EDUCATION SECTION ===== */
 .education-section {
-    padding: 60px 8%;
-     
+    padding: 80px 8% 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centers header items */
+    text-align: center;     /* Centers text */
+    background: transparent;
 }
 
+.section-title {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    font-weight: 700;
+    color: #854CE6;         /* Signature Purple */
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.education-section .underline {
+    width: 120px;
+    height: 4px;
+    background-color: #854CE6;
+    margin: 0 auto 20px;    /* Centers the line itself */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(133, 76, 230, 0.4);
+}
+
+/* ===== GLOWING TIMELINE LINE ===== */
 .education-column {
-    display: block; /* Removes grid/flex layout to force vertical stack */
     max-width: 900px;
     margin: 0 auto;
     position: relative;
-    padding-left: 40px;
+    padding-left: 60px;     /* Room for line + icons */
+    padding-bottom: 40px;
 }
 
-/* The vertical timeline line from your screenshot */
+/* The Vertical Line */
 .education-column::before {
     content: '';
     position: absolute;
-    left: 20px;
-    top: 0;
+    left: 31px;             /* Perfectly centers behind 42px icons */
+    top: 10px;
     width: 2px;
-    height: 100%;}
-
-.education-card {
-    position: relative;
-    margin-bottom: 40px; /* Space between the two sections */
-  
+    height: 100%;
+    background: linear-gradient(to bottom, #854CE6, rgba(133, 76, 230, 0.1));
+    box-shadow: 0 0 8px rgba(133, 76, 230, 0.3);
+    z-index: 1;
+    transition: all 0.4s ease;
 }
+
+/* The Icon (Circle) */
+.edu-icon {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 42px;
+    height: 42px;
+    background: #0f172a;    /* Matches body bg to mask the line */
+    border: 2px solid #854CE6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #854CE6;
+    z-index: 2;
+    transition: all 0.4s ease-in-out;
+}
+
+/* ===== HOVER EFFECTS ===== */
+.education-card:hover .edu-icon {
+    border-color: #b185ff;
+    box-shadow: 0 0 20px rgba(133, 76, 230, 0.8), 
+                0 0 40px rgba(133, 76, 230, 0.4);
+    transform: scale(1.15);
+    color: #ffffff;
+    background: #854CE6;
+}
+
+/* Subtle glow for the line when section is hovered */
+.education-column:hover::before {
+    box-shadow: 0 0 15px rgba(133, 76, 230, 0.5);
+}
+
+
+
+
+
+
+
+
 
 
 
