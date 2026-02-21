@@ -392,208 +392,111 @@ p { font-size: 1rem; color: #cbd5e1; margin: 1rem 0; }
 
 
 
+.education-section {
+  background-color: #0f172a;
+  padding: 100px 10%;
+  color: #fff;
+}
 
-/* Timeline Logic */
-.timeline-container {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    padding-left: 50px;
+/* Container */
+.edu-container {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
 }
 
 /* Vertical Line */
-.timeline-container::before {
-    content: '';
-    position: absolute;
-    left: 19px;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
+.edu-container::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #1e293b;
 }
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 50px;
+/* Education Item */
+.edu-item {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 60px;
 }
 
-/* Timeline Purple Circle */
-.timeline-icon {
-    position: absolute;
-    left: -50px;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    background: var(--card-bg);
-    border: 1px solid var(--accent-purple);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent-purple);
-    z-index: 2;
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
-}
-
-.timeline-content {
-    background: transparent;
-    transition: 0.3s;
-}
-
-
-/* ===== CONSOLIDATED EDUCATION SECTION ===== */
-.education-section {
-    padding: 80px 8% 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;    /* Centers header items */
-    text-align: center;     /* Centers text */
-    background: transparent;
-}
-
-.section-title {
-    font-size: clamp(2.5rem, 8vw, 3.5rem);
-    font-weight: 700;
-    color: #854CE6;         /* Signature Purple */
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-}
-
-.education-section .underline {
-    width: 120px;
-    height: 4px;
-    background-color: #854CE6;
-    margin: 0 auto 20px;    /* Centers the line itself */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(133, 76, 230, 0.4);
-}
-
-/* ===== GLOWING TIMELINE LINE ===== */
-.education-column {
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-    padding-left: 60px;     /* Room for line + icons */
-    padding-bottom: 40px;
-}
-
-/* The Vertical Line */
-.education-column::before {
-    content: '';
-    position: absolute;
-    left: 31px;             /* Perfectly centers behind 42px icons */
-    top: 10px;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(to bottom, #854CE6, rgba(133, 76, 230, 0.1));
-    box-shadow: 0 0 8px rgba(133, 76, 230, 0.3);
-    z-index: 1;
-    transition: all 0.4s ease;
-}
-
-/* The Icon (Circle) */
+/* Circle Icon */
 .edu-icon {
-    position: absolute;
-    left: 10px;
-    top: 0;
-    width: 42px;
-    height: 42px;
-    background: #0f172a;    /* Matches body bg to mask the line */
-    border: 2px solid #854CE6;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #854CE6;
-    z-index: 2;
-    transition: all 0.4s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: #1e293b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38bdf8;
+  font-size: 16px;
+  border: 2px solid #38bdf8;
 }
 
-/* ===== HOVER EFFECTS ===== */
-.education-card:hover .edu-icon {
-    border-color: #b185ff;
-    box-shadow: 0 0 20px rgba(133, 76, 230, 0.8), 
-                0 0 40px rgba(133, 76, 230, 0.4);
-    transform: scale(1.15);
-    color: #ffffff;
-    background: #854CE6;
+/* Content */
+.edu-content h3 {
+  margin: 8px 0;
+  font-size: 20px;
 }
 
-/* Subtle glow for the line when section is hovered */
-.education-column:hover::before {
-    box-shadow: 0 0 15px rgba(133, 76, 230, 0.5);
-}
-
-
-
-
-
-
-
-
-
-
-
-.card-content {
-    padding-left: 20px;
+.edu-content h4 {
+  font-weight: 400;
+  color: #cbd5e1;
+  margin-bottom: 10px;
 }
 
 .edu-date {
-    color: #a1a1aa; /* Matches your text-dim */
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-    display: block;
+  color: #94a3b8;
+  font-size: 14px;
 }
 
-.edu-title {
-    font-size: 1.4rem;
-    color: #8b5cf6; /* Matches Education title color */
-    font-weight: 600;
-    margin-bottom: 4px;
+.edu-grade {
+  color: #38bdf8;
+  margin-bottom: 10px;
 }
 
-.institution {
-    font-size: 1.1rem;
-    color: #ffffff;
-    margin-bottom: 8px;
+.edu-content p {
+  color: #94a3b8;
+  line-height: 1.6;
 }
 
-.grade {
-    color: #8b5cf6;
-    font-weight: 500;
-    margin-bottom: 12px;
+/* Responsive */
+@media (max-width: 768px) {
+  .edu-container::before {
+    left: 10px;
+  }
+
+  .edu-item {
+    padding-left: 50px;
+  }
 }
 
-.grade span {
-    color: #a1a1aa;
-}
 
-.description {
-    color: #a1a1aa;
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
 
-/* 1. Add a smooth transition to the icon so the glow doesn't just "snap" on */
-.edu-icon {
-    transition: all 0.4s ease-in-out;
-}
 
-/* 2. When the education card is hovered, the icon glows and the border brightens */
-.education-card:hover .edu-icon {
-    border-color: #b185ff; /* A lighter shade of purple for the border */
-    box-shadow: 0 0 20px rgba(133, 76, 230, 0.8), 
-                0 0 40px rgba(133, 76, 230, 0.4); /* Double glow effect */
-    transform: scale(1.1); /* Slightly enlarges the icon */
-    color: #ffffff; /* Turns the icon inside white for contrast */
-}
 
-/* 3. Optional: Add a subtle glow to the line itself when the section is hovered */
-.education-column:hover::before {
-    box-shadow: 0 0 15px rgba(133, 76, 230, 0.6);
-    background: #854CE6;
-    transition: all 0.4s ease;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
