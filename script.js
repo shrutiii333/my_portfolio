@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Initialize EmailJS
 (function () {
-  emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your Public Key
+  emailjs.init("shrutighodke2003@gmail.com"); // Replace with your Public Key
 })();
 
 document.getElementById("contactForm")
