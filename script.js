@@ -101,25 +101,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Initialize EmailJS
-(function () {
-  emailjs.init("shrutighodke2003@gmail.com"); // Replace with your Public Key
-})();
+function sendMail(event) {
+  event.preventDefault();
 
-document.getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const subject = document.getElementById("subject").value;
+  const message = document.getElementById("message").value;
 
-    emailjs.sendForm(
-      "YOUR_SERVICE_ID",   // Replace with your Service ID
-      "YOUR_TEMPLATE_ID",  // Replace with your Template ID
-      this
-    )
-    .then(function () {
-      alert("Message Sent Successfully ✅");
-      document.getElementById("contactForm").reset();
-    }, function (error) {
-      alert("Failed to send message ❌");
-      console.log(error);
-    });
-  });
+  const mailtoLink = `mailto:shrutighodke2003@gmail.com
+  ?subject=${encodeURIComponent(subject)}
+  &body=${encodeURIComponent(
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n\n" +
+    message
+  )}`;
+
+  window.location.href = mailtoLink;
+}

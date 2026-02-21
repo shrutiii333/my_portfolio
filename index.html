@@ -257,24 +257,34 @@
 
 
     <!-- Contact Section -->
+
+
 <div class="contact-container" id="contact">
-  <form id="contactForm" class="contact-form">
+  
+  <form class="contact-form" onsubmit="sendMail(event)">
     <h2>Drop Me a Message</h2>
 
-    <input type="email" name="from_email" placeholder="Your Email" class="input-box" required>
-    <input type="text" name="from_name" placeholder="Your Name" class="input-box" required>
-    <input type="text" name="subject" placeholder="Subject" class="input-box" required>
-    <textarea name="message" placeholder="Message" class="input-box" required></textarea>
+    <input type="email" id="email" placeholder="Your Email" class="input-box" required>
+    <input type="text" id="name" placeholder="Your Name" class="input-box" required>
+    <input type="text" id="subject" placeholder="Subject" class="input-box" required>
+    <textarea id="message" placeholder="Message" class="input-box" required></textarea>
 
     <button type="submit" class="send-btn">Send Message</button>
   </form>
 
+  <div class="contact-photo">
+    <img src="shruti.jpeg" alt="Shruti photo"
+      onerror="this.src='https://via.placeholder.com/280x280?text=Shruti'">
+  </div>
 
-      <div class="contact-photo">
-        <img src="shruti.jpeg" alt="Shruti photo" onerror="this.src='https://via.placeholder.com/280x280?text=Shruti'">
-      </div>
-    </div>
 </div>
+
+
+
+
+
+
+
     <!-- Footer -->
     <footer class="footer">
       <p>© 2026 Shruti Ghodke · Data Analyst</p>
