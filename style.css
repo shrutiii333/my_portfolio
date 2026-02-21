@@ -722,12 +722,48 @@ box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
 }
 
 
-.section-title1{
+/* =========================
+   CENTER PROJECT TITLE ONLY
+========================= */
+
+.project-section1 {
+    text-align: center;
+}
+
+.section-header1 {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.section-title1 {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--accent-purple);
+    color: #38bdf8; /* Use your theme blue instead of var */
     margin-bottom: 10px;
 }
+
+.section-header1 .title-underline {
+    width: 80px;
+    height: 4px;
+    background: #64ffda;
+    margin: 0 auto 20px; /* centers underline */
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
 
 .title-underline {
     width: 80px;
@@ -763,46 +799,6 @@ box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
     border-color: var(--accent); 
     transform: translateY(-8px); 
 }
-/* =========================
-   PROJECT SECTION CENTER
-========================= */
-
-.project-section1 {
-  padding: 80px 8%;
-  text-align: center; /* Centers all text */
-}
-
-.section-header1 {
-  max-width: 800px;
-  margin: 0 auto 60px; /* Centers the whole header block */
-  text-align: center;
-}
-
-.section-title1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
-
-.title-underline {
-  width: 80px;
-  height: 4px;
-  background: #64ffda;
-  margin: 0 auto 20px; /* Centers underline */
-  border-radius: 4px;
-}
-
-.section-subtitle {
-  color: #94a3b8;
-  font-size: 1rem;
-  max-width: 600px;
-  margin: 0 auto; /* Centers paragraph block */
-  line-height: 1.6;
-}
-
-
-
 
 
 .img-container { padding: 12px; }
