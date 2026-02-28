@@ -837,13 +837,7 @@ svg {
   border-radius: 14px;
 }
 
-.card-content {
-  padding: 10px 20px 25px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  /* Fills the remaining height of the card */
-}
+
 
 .project-title {
   font-size: 1.1rem;
@@ -857,15 +851,21 @@ svg {
   margin-bottom: 15px;
 }
 
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 15px;
   justify-content: center;
-  
+  margin-bottom: 15px;
 }
+
 
 
 .tags span {
