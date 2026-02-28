@@ -823,6 +823,12 @@ box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
     border-radius: 6px;
     color: var(--text);
 }
+.tags span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .description {
     font-size: 0.9rem;
