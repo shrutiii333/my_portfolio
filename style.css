@@ -402,7 +402,7 @@ p {
   width: 120px;
   /* Length of the purple line */
   height: 4px;
-  background-color: var(--accent-purple);
+  background-color:  #38bdf8;  
   margin: 0 auto 20px;
   /* 'auto' centers the div itself */
   border-radius: 10px;
