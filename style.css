@@ -387,7 +387,7 @@ p {
   font-size: clamp(2.5rem, 8vw, 3.5rem);
   /* Responsive sizing */
   font-weight: 700;
-  color: #854CE6;
+  color:  #38bdf8;
   /* The purple from your screenshot */
   margin-bottom: 10px;
   letter-spacing: 1px;
