@@ -1,123 +1,127 @@
-// ===== TYPEWRITER EFFECT (mobile friendly) =====
-(function() {
-  const words = ['Shruti Ghodke', 'a Data Analyst'];
-  let i = 0;
-  let j = 0;
-  let isDeleting = false;
-  const typewriterSpan = document.getElementById('typewriter');
-  
-  if (!typewriterSpan) return;
+/* ===== TYPING ANIMATION ===== */
+const roles = [
+  'Data Analyst',
+  'Full Stack Developer',
+  'Power BI Developer',
+  'Python Developer',
+  'SQL Expert'
+];
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-  function typeEffect() {
-    if (i < words.length) {
-      if (!isDeleting && j <= words[i].length) {
-        typewriterSpan.textContent = words[i].substring(0, j);
-        j++;
-        setTimeout(typeEffect, 120);
-      } 
-      else if (isDeleting && j >= 0) {
-        typewriterSpan.textContent = words[i].substring(0, j);
-        j--;
-        setTimeout(typeEffect, 60);
-      } 
-      else {
-        if (!isDeleting) {
-          isDeleting = true;
-          setTimeout(typeEffect, 1000);
-        } 
-        else {
-          isDeleting = false;
-          i = (i + 1) % words.length;
-          j = 0;
-          setTimeout(typeEffect, 200);
-        }
-      }
+function type() {
+  const el = document.getElementById('typed-text');
+  if (!el) return;
+  const currentWord = roles[roleIndex];
+
+  if (!isDeleting) {
+    el.textContent = currentWord.substring(0, charIndex + 1);
+    charIndex++;
+    if (charIndex === currentWord.length) {
+      isDeleting = true;
+      setTimeout(type, 1800);
+      return;
+    }
+  } else {
+    el.textContent = currentWord.substring(0, charIndex - 1);
+    charIndex--;
+    if (charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
     }
   }
-  typeEffect();
-})();
+  setTimeout(type, isDeleting ? 60 : 90);
+}
+type();
 
-// ===== MOBILE MENU TOGGLE =====
-document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-  
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', function() {
-      navLinks.classList.toggle('active');
-    });
-  }
-});
+/* ===== SCROLL FADE-IN ANIMATION ===== */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08 });
 
-// ===== CLOSE MOBILE MENU ON LINK CLICK =====
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+/* ===== SKILLS TAB SWITCHER ===== */
+function showSkill(id, btn) {
+  document.querySelectorAll('.stab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.skill-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  const targetPanel = document.getElementById('sp-' + id);
+  if (targetPanel) targetPanel.classList.add('active');
+}
+
+/* ===== PROJECT FILTER ===== */
+function filterProj(type, btn) {
+  document.querySelectorAll('.pfbtn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.proj-card').forEach(card => {
+    if (type === 'all' || card.dataset.type === type) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+
+/* ===== CONTACT FORM ===== */
+const sendBtn = document.getElementById('send-btn');
+if (sendBtn) {
+  sendBtn.addEventListener('click', () => {
+    alert('Thanks for reaching out! Shruti will get back to you soon. 😊');
+  });
+}
+
+/* ===== MOBILE NAV TOGGLE ===== */
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.style.display === 'flex';
+    if (isOpen) {
+      navLinks.style.cssText = '';
+    } else {
+      navLinks.style.cssText = `
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: rgba(9,9,11,0.97);
+        padding: 16px 5%;
+        border-bottom: 1px solid #27272a;
+        gap: 4px;
+      `;
+    }
+  });
+}
+
+/* Close mobile nav when a link is clicked */
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    const navLinks = document.getElementById('navLinks');
-    if (navLinks && navLinks.classList.contains('active')) {
-      navLinks.classList.remove('active');
+    if (navLinks) navLinks.style.cssText = '';
+  });
+});
+
+/* ===== ACTIVE NAV LINK ON SCROLL ===== */
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 80;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.style.color = '';
+    if (link.getAttribute('href') === '#' + current) {
+      link.style.color = 'var(--accent)';
     }
   });
 });
-
-// ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const href = this.getAttribute('href');
-    if (href === "#" || href === "") return;
-    
-    const target = document.querySelector(href);
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
-});
-
-
-
-// ===== VIEW PROJECT BUTTON (demo) =====
-document.addEventListener('DOMContentLoaded', function() {
-  const viewBtn = document.querySelector('.view-btn');
-  if (viewBtn) {
-    viewBtn.addEventListener('click', function() {
-      alert('Project details coming soon!');
-    });
-  }
-});
-
-// ===== IMAGE FALLBACK (if SVGs missing) =====
-document.addEventListener('DOMContentLoaded', () => {
-  const images = document.querySelectorAll('img[onerror]');
-  images.forEach(img => {
-    img.addEventListener('error', function() {
-      // onerror already defined in HTML, but just in case
-      if (!this.src.includes('placeholder')) {
-        this.src = 'https://via.placeholder.com/500x400?text=Image+not+found';
-      }
-    });
-  });
-});
-
-function sendMail(event) {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const subject = document.getElementById("subject").value;
-  const message = document.getElementById("message").value;
-
-  const gmailLink =
-    "https://mail.google.com/mail/?view=cm&fs=1" +
-    "&to=shrutighodke2003@gmail.com" +
-    "&su=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(
-      "Name: " + name + "\n" +
-      "Email: " + email + "\n\n" +
-      message
-    );
-
-  window.open(gmailLink, "_blank");
-}
